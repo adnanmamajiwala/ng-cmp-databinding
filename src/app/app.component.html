@@ -20,12 +20,12 @@
     (eventCreated)="onEventCreated($event)"></app-game-control>
   <hr>
   <div class="row">
-    <div class="col-xs-7">
+    <div class="col-xs-5">
       <app-odd
         *ngFor="let oddEvent of oddEvents"
         [oddEvent]="oddEvent"></app-odd>
     </div>
-    <div class="col-xs-7">
+    <div class="col-xs-5">
       <app-even
         *ngFor="let evenEvent of evenEvents"
         [evenEvent]="evenEvent" ></app-even>

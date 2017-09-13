@@ -29,7 +29,7 @@ export class AppComponent {
 
 
   onEventCreated(eventModel: EventModel) {
-    if ((eventModel.eventId / 2) === 0) {
+    if ((eventModel.eventId % 2) === 0) {
       this.oddEvents.push(eventModel);
     }else{
       this.evenEvents.push(eventModel);

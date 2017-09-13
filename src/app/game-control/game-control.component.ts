@@ -10,7 +10,7 @@ export class GameControlComponent implements OnInit {
 
   @Output() eventCreated = new EventEmitter<EventModel>();
   interval;
-  eventModel: EventModel = new EventModel(0);
+  startNumber =0;
 
   constructor() {
   }
@@ -20,8 +20,7 @@ export class GameControlComponent implements OnInit {
 
   startEmitting() {
     this.interval = setInterval(() => {
-      this.eventModel.eventId++;
-      this.eventCreated.emit(this.eventModel);
+      this.eventCreated.emit(new EventModel(this.startNumber++));
     }, 1000);
   }
 
